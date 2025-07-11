@@ -1,4 +1,4 @@
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { FloatingHearts } from './floating-hearts';
 
@@ -26,17 +26,17 @@ export function PunchBoxModal({ isOpen, onClose, dayNumber, mission }: PunchBoxM
             <div className="text-4xl mb-4 animate-heartbeat">
               {mission.emoji}
             </div>
-            <h2 className="text-2xl font-bold love-purple mb-4">
-              Day {dayNumber} - {mission.title}
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <DialogTitle className="text-2xl font-bold love-purple mb-4">
+              第 {dayNumber} 天 - {mission.title}
+            </DialogTitle>
+            <DialogDescription className="text-gray-700 leading-relaxed mb-6">
               {mission.description}
-            </p>
+            </DialogDescription>
             <Button 
               onClick={onClose}
               className="bg-gradient-to-r from-[var(--love-pink)] to-[var(--love-coral)] text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-none"
             >
-              Close 💕
+              關閉 💕
             </Button>
           </div>
         </div>

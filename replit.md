@@ -7,6 +7,7 @@ This is a romantic surprise application built as a "punch box" experience where 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Language: Chinese (Traditional) - User provided Chinese text for the application interface.
 
 ## System Architecture
 
