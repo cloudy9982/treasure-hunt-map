@@ -41,11 +41,14 @@ Language: Chinese (Traditional) - User provided Chinese text for the application
 
 ## Key Components
 
-### 1. Punch Box Grid (`PunchBoxGrid`)
-- Renders a 4x5 grid of 20 boxes representing each day
-- Manages unlock logic based on current date vs. start date (July 27, 2024)
-- Handles localStorage persistence for opened boxes
-- Provides visual feedback for locked, unlocked, and opened states
+### 1. Interactive Map (`InteractiveMap`)
+- Renders an interactive adventure map with branching paths
+- Three distinct paths: 回憶森林線 (Memory Forest), 搞怪沙漠線 (Fun Desert), 星光高塔線 (Starlight Tower)
+- Each path contains 5 unique nodes (days 1-5), followed by shared continuation path (days 6-20)
+- Three-phase gameplay: Prologue → Path Selection → Adventure
+- Manages unlock logic based on current date vs. start date (July 26, 2024)
+- Handles localStorage persistence for opened nodes and selected path
+- Visual path rendering with SVG curves and animated dash effects
 
 ### 2. Punch Box Modal (`PunchBoxModal`)
 - Displays mission details when a box is clicked
@@ -59,28 +62,35 @@ Language: Chinese (Traditional) - User provided Chinese text for the application
 
 ### 4. Mission System
 - 21 RPG-themed romantic missions/activities (including prologue)
-- Each mission includes RPG location name, title, emoji, and detailed description
-- Missions range from simple gestures to elaborate romantic activities
-- Themed locations like "記憶森林入口", "糖果小屋", "語咒塔下", etc.
+- Three mission types: Romance (R), Fun (F), Challenge (C)
+- Three distinct adventure paths with different themes and difficulties
+- Path-specific missions for days 1-5, then shared continuation for days 6-20
+- Themed locations from "記憶森林入口" to "終焉星光台"
+- Strategic choice element: users select one path and cannot change
 - Special final mission with "一週年戀人通行證" reward
 
 ## Data Flow
 
 1. **Application Initialization**: 
    - App loads with React Query client setup
-   - localStorage checked for previously opened boxes
+   - localStorage checked for map progress (opened nodes, selected path, game phase)
    - Current date compared against start date for unlock logic
 
-2. **Box Interaction**:
-   - User clicks on unlocked box
-   - Modal opens displaying mission details
-   - Box state updated in localStorage
-   - Visual feedback provided through animations
+2. **Game Progression**:
+   - Phase 1: Prologue - User signs contract and unlocks path selection
+   - Phase 2: Path Selection - User chooses one of three adventure paths
+   - Phase 3: Adventure - Daily node unlocking and mission completion
 
-3. **State Persistence**:
-   - Box states automatically saved to localStorage
+3. **Node Interaction**:
+   - User clicks on unlocked map node
+   - Path restrictions enforced for days 1-5
+   - Modal opens displaying mission details with type indicators (R/F/C)
+   - Node state updated in localStorage with visual map updates
+
+4. **State Persistence**:
+   - Complete game state (nodes, path, phase) automatically saved to localStorage
    - Progress maintained across browser sessions
-   - No server-side persistence currently implemented
+   - Database ready for user authentication and progress sync
 
 ## External Dependencies
 

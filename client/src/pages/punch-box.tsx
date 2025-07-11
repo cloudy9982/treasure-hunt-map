@@ -1,4 +1,4 @@
-import { PunchBoxGrid } from '@/components/punch-box-grid';
+import { InteractiveMap } from '@/components/interactive-map';
 
 export default function PunchBox() {
   return (
@@ -33,30 +33,39 @@ export default function PunchBox() {
           </div>
         </header>
 
-        {/* Punch Box Grid Component */}
-        <PunchBoxGrid />
+        {/* Interactive Map Component */}
+        <InteractiveMap />
 
         {/* Instructions */}
         <div className="text-center bg-white rounded-2xl p-6 shadow-lg animate-fade-in">
-          <h3 className="text-xl font-semibold love-purple mb-3 font-['Quicksand']">使用說明 📋</h3>
+          <h3 className="text-xl font-semibold love-purple mb-3 font-['Quicksand']">冒險指南 🗺️</h3>
           <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-700 font-['Quicksand']">
             <div className="flex items-center justify-center space-x-2">
-              <span className="text-2xl">⚔️</span>
-              <span>RPG任務每日解鎖，請耐心等待冒險開始</span>
+              <span className="text-2xl">🌟</span>
+              <span>序章後選擇一條冒險路線</span>
             </div>
             <div className="flex items-center justify-center space-x-2">
               <span className="text-2xl">🗺️</span>
-              <span>點擊已解鎖的地點開始任務</span>
+              <span>每日解鎖新地點，點擊探索任務</span>
             </div>
             <div className="flex items-center justify-center space-x-2">
-              <span className="text-2xl">🌟</span>
-              <span>完成所有任務後，將獲得「一週年戀人通行證」</span>
+              <span className="text-2xl">🎁</span>
+              <span>完成 21 天冒險獲得終極寶藏</span>
             </div>
           </div>
-          <div className="mt-6 text-center">
-            <p className="text-gray-600 font-['Quicksand'] text-sm">
-              💌 準備好了嗎？讓我們一起展開這 20 天的甜蜜探索
-            </p>
+          <div className="mt-6 grid md:grid-cols-3 gap-4 text-xs text-gray-600 font-['Quicksand']">
+            <div className="bg-pink-50 rounded-lg p-3">
+              <div className="font-semibold text-pink-600 mb-1">❤️ Romance (R)</div>
+              <div>情話、擁抱、手寫信</div>
+            </div>
+            <div className="bg-orange-50 rounded-lg p-3">
+              <div className="font-semibold text-orange-600 mb-1">😄 Fun (F)</div>
+              <div>搞笑自拍、撒嬌語音、遊戲</div>
+            </div>
+            <div className="bg-purple-50 rounded-lg p-3">
+              <div className="font-semibold text-purple-600 mb-1">💪 Challenge (C)</div>
+              <div>公主抱、料理PK、深情對視</div>
+            </div>
           </div>
         </div>
       </div>
