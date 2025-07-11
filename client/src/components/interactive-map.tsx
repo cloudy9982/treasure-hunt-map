@@ -30,65 +30,63 @@ const mapPaths: Path[] = [
     id: 'memory',
     name: '回憶森林線',
     color: '#FF69B4',
-    theme: '溫柔回憶',
+    theme: '深度連結',
     nodes: [
-      { id: 'memory-1', day: 1, x: 15, y: 80, pathId: 'memory', mission: { title: '記憶森林入口', emoji: '🌸', description: '分享最早合照 + 心情 📸💖', type: 'R' }},
-      { id: 'memory-2', day: 2, x: 25, y: 65, pathId: 'memory', mission: { title: '回憶樹下', emoji: '🌳', description: '說 3 句我最喜歡你的地方 💕', type: 'R' }},
-      { id: 'memory-3', day: 3, x: 40, y: 55, pathId: 'memory', mission: { title: '真假回憶測試', emoji: '🎭', description: '"真假回憶"二選一遊戲，猜猜哪個是真的！😄', type: 'F' }},
-      { id: 'memory-4', day: 4, x: 55, y: 45, pathId: 'memory', mission: { title: '畫畫小屋', emoji: '🎨', description: '情侶畫畫挑戰：各自畫對方 ✏️', type: 'C' }},
-      { id: 'memory-5', day: 5, x: 70, y: 35, pathId: 'memory', mission: { title: '溫柔湖泊', emoji: '🌊', description: '三段式擁抱之術（背後抱、睡前抱、隨機閃電抱）🤗', type: 'R' }}
+      { id: 'memory-1', day: 1, x: 15, y: 80, pathId: 'memory', mission: { title: '連結', emoji: '🌸', description: '分享一個過去一年中最喜歡的共同回憶。', type: 'R' }},
+      { id: 'memory-2', day: 2, x: 25, y: 65, pathId: 'memory', mission: { title: '交流', emoji: '☕', description: '各自沖一杯茶或咖啡，並用三句話分享今天的亮點。', type: 'R' }},
+      { id: 'memory-3', day: 3, x: 40, y: 55, pathId: 'memory', mission: { title: '思考', emoji: '📖', description: '各自選一篇有趣的文章或 podcast，摘要給對方聽。', type: 'F' }},
+      { id: 'memory-4', day: 4, x: 55, y: 45, pathId: 'memory', mission: { title: '放鬆', emoji: '🧘', description: '一起做 10 分鐘的伸展操或瑜伽。', type: 'C' }}
     ]
   },
   {
     id: 'fun',
-    name: '搞怪沙漠線',
+    name: '智趣沙漠線',
     color: '#FFB347',
-    theme: '歡樂搞怪',
+    theme: '輕鬆解謎',
     nodes: [
-      { id: 'fun-1', day: 1, x: 15, y: 50, pathId: 'fun', mission: { title: '搞怪綠洲', emoji: '🌵', description: '搞笑貼紙尋寶：找到我藏的搞怪貼紙！🔍', type: 'F' }},
-      { id: 'fun-2', day: 2, x: 30, y: 40, pathId: 'fun', mission: { title: '鬼臉競技場', emoji: '👹', description: '比誰的鬼臉可怕，輸的人要被親一下！😱💋', type: 'F' }},
-      { id: 'fun-3', day: 3, x: 45, y: 35, pathId: 'fun', mission: { title: '沙漠挑戰台', emoji: '🏋️', description: '公主抱挑戰：抱起對方 10 秒鐘！💪', type: 'C' }},
-      { id: 'fun-4', day: 4, x: 60, y: 30, pathId: 'fun', mission: { title: '音樂沙丘', emoji: '🎵', description: '躺腿聽情歌：你躺在我腿上聽我們的歌 🎶', type: 'R' }},
-      { id: 'fun-5', day: 5, x: 75, y: 25, pathId: 'fun', mission: { title: '料理對決場', emoji: '🍳', description: '微型情侶餐任務：一起做料理餵對方 👄🍴', type: 'C' }}
+      { id: 'fun-1', day: 1, x: 15, y: 50, pathId: 'fun', mission: { title: '解謎', emoji: '🧩', description: '一起完成一個小拼圖或簡單數獨。', type: 'F' }},
+      { id: 'fun-2', day: 2, x: 30, y: 40, pathId: 'fun', mission: { title: '遊戲', emoji: '🎯', description: '玩 20 個問題猜物遊戲，從房間選一個東西開始。', type: 'F' }},
+      { id: 'fun-3', day: 3, x: 45, y: 35, pathId: 'fun', mission: { title: '規劃', emoji: '🍽️', description: '一起想三個週末晚餐的點子並挑一個。', type: 'C' }},
+      { id: 'fun-4', day: 4, x: 60, y: 30, pathId: 'fun', mission: { title: '整理', emoji: '📦', description: '一起花 15 分鐘整理一個抽屜或桌面區域。', type: 'C' }}
     ]
   },
   {
     id: 'starlight',
     name: '星光高塔線',
     color: '#9370DB',
-    theme: '浪漫星空',
+    theme: '成長規劃',
     nodes: [
-      { id: 'star-1', day: 1, x: 15, y: 20, pathId: 'starlight', mission: { title: '療癒塔基', emoji: '💆', description: '3 分鐘肩頸按摩 + 告訴我你今天的感受 😌', type: 'C' }},
-      { id: 'star-2', day: 2, x: 32, y: 15, pathId: 'starlight', mission: { title: '星語階梯', emoji: '⭐', description: '星星下的情書：寫一張小紙條說愛我的理由 💌', type: 'R' }},
-      { id: 'star-3', day: 3, x: 50, y: 12, pathId: 'starlight', mission: { title: '深情觀景台', emoji: '👁️', description: '10 秒深情對望，什麼都不能說，只用眼神表達 ❤️', type: 'R' }},
-      { id: 'star-4', day: 4, x: 68, y: 15, pathId: 'starlight', mission: { title: '未來許願台', emoji: '🌈', description: '腦洞未來約會分享：你想帶我去哪裡？✈️💭', type: 'F' }},
-      { id: 'star-5', day: 5, x: 85, y: 20, pathId: 'starlight', mission: { title: '星光塔頂', emoji: '🌟', description: '語音傳訊：「謝謝你陪伴，我最想感謝的是＿＿」🎤💝', type: 'R' }}
+      { id: 'star-1', day: 1, x: 15, y: 20, pathId: 'starlight', mission: { title: '未來', emoji: '🎯', description: '寫下一個自己未來一年想完成的目標，然後分享。', type: 'C' }},
+      { id: 'star-2', day: 2, x: 32, y: 15, pathId: 'starlight', mission: { title: '旅行', emoji: '🗺️', description: '一起規劃一場便宜的一日小旅行。', type: 'R' }},
+      { id: 'star-3', day: 3, x: 50, y: 12, pathId: 'starlight', mission: { title: '學習', emoji: '📚', description: '觀看一部 10 分鐘的教學影片，學一個新技能。', type: 'F' }},
+      { id: 'star-4', day: 4, x: 68, y: 15, pathId: 'starlight', mission: { title: '感謝', emoji: '💌', description: '各自寫一張「關於對方的 3 件感謝之事」並唸出來。', type: 'R' }}
     ]
   }
 ];
 
-// Continuation paths for days 6-20
+// Continuation paths for days 5-20 (calmer, more thoughtful activities)
 const continuationNodes: MapNode[] = [
-  // Days 6-10
-  { id: 'cont-6', day: 6, x: 88, y: 35, pathId: 'shared', mission: { title: '情緒測驗室', emoji: '😊', description: '各自畫「我今天的感覺圖」交換講解 🎨', type: 'F' }},
-  { id: 'cont-7', day: 7, x: 85, y: 50, pathId: 'shared', mission: { title: '詞語迷宮', emoji: '🔮', description: '愛的問答：「我最喜歡你笑起來的哪一瞬間？」❓💕', type: 'R' }},
-  { id: 'cont-8', day: 8, x: 80, y: 65, pathId: 'shared', mission: { title: '撒嬌泉邊', emoji: '🦢', description: '嗲音全開日：說話要撒嬌（「嗚嗚嗚」「哼哼哼」）🥺', type: 'F' }},
-  { id: 'cont-9', day: 9, x: 75, y: 75, pathId: 'shared', mission: { title: '小紙條森林', emoji: '🌲', description: '任務輪到你：由對方設計今天的任務！📋✨', type: 'C' }},
-  { id: 'cont-10', day: 10, x: 65, y: 80, pathId: 'shared', mission: { title: '溫暖火堆', emoji: '🔥', description: '3件你沒發現的小事：我分享偷偷觀察你的可愛事 👀💕', type: 'R' }},
+  // Days 5-10
+  { id: 'cont-5', day: 5, x: 88, y: 35, pathId: 'shared', mission: { title: '深度對話', emoji: '💭', description: '聊聊各自最近學到的一件新事物。', type: 'R' }},
+  { id: 'cont-6', day: 6, x: 85, y: 50, pathId: 'shared', mission: { title: '音樂時光', emoji: '🎵', description: '一起聽一首新歌，分享各自的感受。', type: 'R' }},
+  { id: 'cont-7', day: 7, x: 80, y: 65, pathId: 'shared', mission: { title: '小遊戲', emoji: '🎲', description: '玩一個簡單的紙筆遊戲，如井字遊戲或文字接龍。', type: 'F' }},
+  { id: 'cont-8', day: 8, x: 75, y: 75, pathId: 'shared', mission: { title: '計劃時間', emoji: '📅', description: '一起規劃下週的一個活動或任務。', type: 'C' }},
+  { id: 'cont-9', day: 9, x: 65, y: 80, pathId: 'shared', mission: { title: '回憶分享', emoji: '📷', description: '翻看舊照片，各自說一個有趣的回憶。', type: 'R' }},
+  { id: 'cont-10', day: 10, x: 55, y: 85, pathId: 'shared', mission: { title: '冥想放鬆', emoji: '🕯️', description: '一起做 5 分鐘的呼吸冥想或靜坐。', type: 'C' }},
   
   // Days 11-15
-  { id: 'cont-11', day: 11, x: 55, y: 85, pathId: 'shared', mission: { title: '擁抱挑戰場', emoji: '👑', description: '公主抱大挑戰（可搞笑演出）💪', type: 'C' }},
-  { id: 'cont-12', day: 12, x: 45, y: 88, pathId: 'shared', mission: { title: '問答神殿', emoji: '🏛️', description: '戀人小測驗：第一次去的餐廳？我的口頭禪？📝', type: 'F' }},
-  { id: 'cont-13', day: 13, x: 35, y: 85, pathId: 'shared', mission: { title: '心跳風鈴林', emoji: '🎐', description: '交互誇誇日：寫「我最欣賞你的TOP3」✍️', type: 'R' }},
-  { id: 'cont-14', day: 14, x: 25, y: 80, pathId: 'shared', mission: { title: '命運轉盤所', emoji: '🎯', description: '抽浪漫券：按摩/親親3次/情話5連發 🎫', type: 'C' }},
-  { id: 'cont-15', day: 15, x: 20, y: 70, pathId: 'shared', mission: { title: '秘密花園', emoji: '🌺', description: '悄悄話：說一個從未告訴別人的秘密 🤫💗', type: 'R' }},
+  { id: 'cont-11', day: 11, x: 45, y: 88, pathId: 'shared', mission: { title: '知識分享', emoji: '📚', description: '各自分享一個最近讀到的有趣知識或事實。', type: 'F' }},
+  { id: 'cont-12', day: 12, x: 35, y: 85, pathId: 'shared', mission: { title: '感謝時刻', emoji: '🙏', description: '各自說三件今天值得感謝的小事。', type: 'R' }},
+  { id: 'cont-13', day: 13, x: 25, y: 80, pathId: 'shared', mission: { title: '創意時間', emoji: '🎨', description: '一起畫個簡單的塗鴉或寫幾句詩。', type: 'F' }},
+  { id: 'cont-14', day: 14, x: 20, y: 70, pathId: 'shared', mission: { title: '舒適按摩', emoji: '🤲', description: '輪流給對方做 5 分鐘的手部或肩膀按摩。', type: 'C' }},
+  { id: 'cont-15', day: 15, x: 18, y: 55, pathId: 'shared', mission: { title: '願望清單', emoji: '⭐', description: '各自列出三個今年想完成的小願望並分享。', type: 'R' }},
   
   // Days 16-20
-  { id: 'cont-16', day: 16, x: 18, y: 55, pathId: 'shared', mission: { title: '時光隧道', emoji: '⏰', description: '如果重新體驗和我一起的任何一天？⏳💕', type: 'F' }},
-  { id: 'cont-17', day: 17, x: 20, y: 40, pathId: 'shared', mission: { title: '魔法工作坊', emoji: '✨', description: '意想不到的甜蜜事情：用創意給我驚喜！🎨💝', type: 'C' }},
-  { id: 'cont-18', day: 18, x: 25, y: 30, pathId: 'shared', mission: { title: '舒適角落', emoji: '🛋️', description: '最放鬆的背部按摩 + 告訴我你的一天 💆‍♀️😌', type: 'R' }},
-  { id: 'cont-19', day: 19, x: 35, y: 25, pathId: 'shared', mission: { title: '寶藏前哨', emoji: '🏝️', description: '藏小禮物讓我找到，附上尋寶地圖！🗺️💎', type: 'F' }},
-  { id: 'cont-20', day: 20, x: 50, y: 25, pathId: 'shared', mission: { title: '終焉星光台', emoji: '🌟', description: '終極寶藏：禮物 + 給未來的信 + 一週年戀人通行證 🎁💌', type: 'C' }}
+  { id: 'cont-16', day: 16, x: 20, y: 40, pathId: 'shared', mission: { title: '料理時光', emoji: '🍳', description: '一起準備一個簡單的點心或飲品。', type: 'C' }},
+  { id: 'cont-17', day: 17, x: 25, y: 30, pathId: 'shared', mission: { title: '觀察練習', emoji: '👀', description: '花 5 分鐘安靜地觀察窗外，然後分享各自看到的細節。', type: 'F' }},
+  { id: 'cont-18', day: 18, x: 35, y: 25, pathId: 'shared', mission: { title: '溫柔時光', emoji: '🤗', description: '簡單的擁抱和安靜的陪伴，不需要說話。', type: 'R' }},
+  { id: 'cont-19', day: 19, x: 40, y: 22, pathId: 'shared', mission: { title: '準備驚喜', emoji: '🎁', description: '為明天的最終日準備一個小驚喜或紀念品。', type: 'C' }},
+  { id: 'cont-20', day: 20, x: 50, y: 25, pathId: 'shared', mission: { title: '周年', emoji: '🌟', description: '最終章：交換手寫信、打開紀念禮物，提前慶祝我們的第一週年紀念日！', type: 'C' }}
 ];
 
 export function InteractiveMap() {
@@ -214,7 +212,7 @@ export function InteractiveMap() {
       <div className="w-full max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold love-purple mb-4">🗺️ 選擇你的冒險路線</h2>
-          <p className="text-gray-600">每條路線都有不同的體驗，選擇後就無法更改喔！</p>
+          <p className="text-gray-600">每條路線都有不同的活動類型，選擇後就無法更改喔！</p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-6">
@@ -230,7 +228,7 @@ export function InteractiveMap() {
                   style={{ backgroundColor: path.color + '20', border: `3px solid ${path.color}` }}
                 >
                   {path.id === 'memory' && '🌸'}
-                  {path.id === 'fun' && '🌵'}
+                  {path.id === 'fun' && '🧩'}
                   {path.id === 'starlight' && '⭐'}
                 </div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: path.color }}>
