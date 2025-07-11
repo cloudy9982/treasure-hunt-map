@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a romantic surprise application built as a "punch box" experience where users can unlock daily surprises over a 20-day period (July 27 - August 15). The application presents a grid of boxes that unlock daily, each containing personalized missions or activities for couples.
+This is a romantic surprise application built as an RPG-themed "punch box" experience where users can unlock daily surprises over a 21-day period (July 26 - August 15). The application presents a grid of boxes that unlock daily, each containing personalized RPG-style missions or activities for couples, with themed locations like "記憶森林入口", "糖果小屋", and "終焉星光台".
 
 ## User Preferences
 
@@ -27,11 +27,12 @@ Language: Chinese (Traditional) - User provided Chinese text for the application
 - **Production**: esbuild for bundling the server code
 
 ### Data Storage Solutions
-- **Database**: PostgreSQL (configured but not actively used yet)
+- **Database**: PostgreSQL with active database schema
 - **ORM**: Drizzle ORM with type-safe schema definitions
 - **Database Provider**: Neon Database (serverless PostgreSQL)
-- **Current Storage**: In-memory storage implementation for user data
-- **Client Storage**: localStorage for persisting user progress
+- **Current Storage**: DatabaseStorage implementation with PostgreSQL backend
+- **Client Storage**: localStorage for persisting user progress (can be migrated to database)
+- **Schema**: Users table and punch_box_progress table for tracking opened boxes
 
 ### Authentication and Authorization
 - **Current State**: Basic user schema defined but no authentication implemented
@@ -57,9 +58,11 @@ Language: Chinese (Traditional) - User provided Chinese text for the application
 - Automatic cleanup after animation completion
 
 ### 4. Mission System
-- 20 predefined romantic missions/activities
-- Each mission includes title, emoji, and detailed description
+- 21 RPG-themed romantic missions/activities (including prologue)
+- Each mission includes RPG location name, title, emoji, and detailed description
 - Missions range from simple gestures to elaborate romantic activities
+- Themed locations like "記憶森林入口", "糖果小屋", "語咒塔下", etc.
+- Special final mission with "一週年戀人通行證" reward
 
 ## Data Flow
 

@@ -8,26 +8,27 @@ interface Mission {
 }
 
 const missions: Mission[] = [
-  { title: "回憶花園", emoji: "🌸", description: "寫下我們在一起最美好的回憶，偷偷藏在我今天會發現的地方！💖" },
-  { title: "情書山丘", emoji: "💌", description: "在我最愛的書裡留張小紙條，寫下你愛我的理由！📚💕" },
-  { title: "未來之塔", emoji: "🏰", description: "告訴我一個你想和我一起去的地方，為什麼對我們很特別？✈️💝" },
-  { title: "溫柔山谷", emoji: "🤗", description: "準備一場溫馨的電影之夜，帶上我最愛的零食和你最溫暖的擁抱！🍿❤️" },
-  { title: "冒險之峰", emoji: "⛰️", description: "建議一個我們從未一起做過的有趣活動！讓我們勇敢冒險！🎯💫" },
-  { title: "晨曦咖啡館", emoji: "☕", description: "用我最愛的晨間飲品和溫柔的吻把我叫醒！早安陽光！☀️💋" },
-  { title: "音樂橋", emoji: "🎵", description: "創建一個5首歌的播放清單，都是讓你想起我們的歌，晚餐時播放！🎶💕" },
-  { title: "星光港灣", emoji: "⭐", description: "今晚和我一起看星星，為我們的未來許個願！🌟💫" },
-  { title: "歡笑泉", emoji: "😂", description: "告訴我你最搞笑的笑話，讓我笑到臉頰痛！🤭💖" },
-  { title: "夢境城堡", emoji: "🏯", description: "分享一個你做過關於我們的夢──無論搞笑、甜蜜或超級奇怪！😴💭" },
-  { title: "感恩林", emoji: "🙏", description: "列出3件你現在對我們關係感到感謝的事情！📝💚" },
-  { title: "舞池", emoji: "💃", description: "在廚房裡和我一起跳舞，邊做晚餐邊跳──不需要音樂！🕺❤️" },
-  { title: "拍照亭", emoji: "📸", description: "和我拍一張搞怪自拍，做你最好笑的表情！我們一起耍寶！🤪📱" },
-  { title: "秘密花園", emoji: "🌺", description: "在我耳邊悄悄說一個你從未告訴過任何人的秘密！🤫💗" },
-  { title: "時光機", emoji: "⏰", description: "如果你可以重新體驗和我在一起的任何一天，會是哪一天？為什麼？帶我回去！⏳💕" },
-  { title: "魔法工作坊", emoji: "✨", description: "今天為我做一件意想不到的甜蜜事情──用你的創意給我驚喜！🎨💝" },
-  { title: "舒適角落", emoji: "🛋️", description: "給我最放鬆的背部按摩，同時告訴我你今天的事情！💆‍♀️😌" },
-  { title: "美食天堂", emoji: "🍕", description: "做或點我最愛的食物，親自餵我吃第一口！我餓了，想要愛的餵食！👄🍴" },
-  { title: "寶藏島", emoji: "🏝️", description: "藏一個小禮物（可以很搞笑！）讓我找到，附上尋寶地圖！🗺️💎" },
-  { title: "永恆森林", emoji: "🌲", description: "寫一封信告訴我你如何看待我們的未來──盡情做夢吧我的愛！💌🔮" }
+  { title: "降臨之夜 - 契約啟動儀式", emoji: "📜", description: "簽下「戀人契約」：例如每天要抱一次＋不能偷看明天任務＋說一句情話 💫⚔️" },
+  { title: "記憶森林入口 - 愛之回憶解封", emoji: "🌸", description: "各挑一張我們以前的合照，分享那天腦中最深刻的記憶 📸💖" },
+  { title: "糖果小屋 - 偷偷塞糖計畫", emoji: "🍬", description: "我送你一包你最愛的零食，任務：由我餵你吃掉它😋" },
+  { title: "語咒塔下 - 情話唸咒練習", emoji: "🗼", description: "各寫一句今天的心情＋一句我想對你說的話（用便條傳）💌" },
+  { title: "搞怪訓練營 - 啵啵交換挑戰", emoji: "🎪", description: "每完成一個小任務就能換一個親親（任務自訂：比鬼臉、唱一句歌等）💋" },
+  { title: "抱抱療癒站 - 三段式擁抱之術", emoji: "🤗", description: "今天必須完成三種抱抱（背後抱、睡前抱、隨機閃電抱）🫂" },
+  { title: "雙人料理屋 - 微型情侶餐任務", emoji: "🍳", description: "一起完成一道料理（泡麵、蛋餅、沙拉皆可），記得要餵對方一口 👄🍴" },
+  { title: "情緒測驗室 - emoji 情感傳心術", emoji: "😊", description: "各自畫一張「我今天的感覺圖」，交換後講解給對方聽 🎨" },
+  { title: "詞語迷宮 - 愛的問答解鎖", emoji: "🔮", description: "各問對方三題戀愛相關小問答（例如：「我最喜歡你笑起來的哪一瞬間？」）❓💕" },
+  { title: "靜心之湖 - 把我畫出來", emoji: "🎨", description: "用紙筆各自畫對方現在的模樣＋互相展示（可認真也可惡搞）✏️" },
+  { title: "幻想約會街 - 腦洞約會設計圖", emoji: "🌈", description: "分享一場「你想跟我去哪裡過情人節」幻想約會劇情 ✈️💭" },
+  { title: "擁抱之橋 - 公主抱大挑戰", emoji: "👑", description: "嘗試抱起對方一次（也可以搞笑演出／互相做反應挑戰）💪" },
+  { title: "星語草原 - 星星瓶傳訊", emoji: "⭐", description: "傳一段語音：「謝謝你這段時間的陪伴，我最想感謝的是＿＿＿」🎤💝" },
+  { title: "問答神殿 - 戀人小測驗", emoji: "🏛️", description: "我問你五題關於我們的記憶：第一次去的餐廳？我最常說的口頭禪？📝" },
+  { title: "撒嬌泉邊 - 嗲音全開日", emoji: "🦢", description: "今天說話要有撒嬌語氣模式（含「嗚嗚嗚」、「你最好是」、「哼哼哼」）🥺" },
+  { title: "小紙條森林 - 任務輪到你", emoji: "🌲", description: "由對方設計今天的任務，寫在一張紙條上讓你完成！📋✨" },
+  { title: "溫暖火堆 - 3件你沒發現的小事", emoji: "🔥", description: "我分享我偷偷觀察你做得很可愛的 3 件小事，請你猜猜是哪天我發現的 👀💕" },
+  { title: "擁抱挑戰場 - 10秒不說話深情對望", emoji: "👁️", description: "任務：今天互看對方眼睛 10 秒，什麼都不能說，只能用眼神表達❤️" },
+  { title: "心跳風鈴林 - 交互誇誇日", emoji: "🎐", description: "各寫一張「我最欣賞你的地方TOP3」貼在對方筆記本 / 鏡子上 ✍️" },
+  { title: "命運轉盤所 - 抽一張浪漫券", emoji: "🎯", description: "對方抽你準備的 3 張浪漫任務卡（如：今晚我幫你按摩、親親3次、情話5連發）🎫" },
+  { title: "終焉星光台 - 終極寶藏解鎖", emoji: "🌟", description: "打開你藏好的禮物 + 一封給未來的我們的信（可寫明年開封）🎁💌\n\n🎫 自製「一週年戀人通行證」一張\n此卡持有人可永久免費兌換擁抱、親親、撒嬌與心靈安慰服務\n發卡日：2025.08.15，有效期：一生一世" }
 ];
 
 export function PunchBoxGrid() {
@@ -35,7 +36,7 @@ export function PunchBoxGrid() {
   const [selectedDay, setSelectedDay] = useState<number | null>(null);
   const [showMessage, setShowMessage] = useState<string | null>(null);
   
-  const startDate = new Date('2024-07-27');
+  const startDate = new Date('2024-07-26');
 
   useEffect(() => {
     const stored = localStorage.getItem('openedBoxes');
@@ -104,7 +105,7 @@ export function PunchBoxGrid() {
     setSelectedDay(null);
   };
 
-  const progress = (openedBoxes.length / 20) * 100;
+  const progress = (openedBoxes.length / 21) * 100;
 
   return (
     <div className="w-full">
@@ -117,16 +118,16 @@ export function PunchBoxGrid() {
           />
         </div>
         <p className="text-center mt-2 text-gray-600 font-medium">
-          {openedBoxes.length === 20 
-            ? "🎉 所有驚喜都揭曉了！你太棒了！🎉"
-            : `已揭曉 ${openedBoxes.length} 個驚喜，共 20 個`
+          {openedBoxes.length === 21 
+            ? "🎉 所有任務都完成了！恭喜通關！🎉"
+            : `已完成 ${openedBoxes.length} 個任務，共 21 個`
           }
         </p>
       </div>
 
       {/* Punch Box Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
-        {Array.from({ length: 20 }, (_, i) => {
+      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6 mb-12">
+        {Array.from({ length: 21 }, (_, i) => {
           const dayNumber = i + 1;
           const boxDate = getBoxDate(dayNumber);
           
@@ -142,7 +143,7 @@ export function PunchBoxGrid() {
               onClick={() => handleBoxClick(dayNumber)}
             >
               <div className="text-xs md:text-sm opacity-80 mb-1">
-                第 {dayNumber} 天
+                {dayNumber === 1 ? "序章" : `DAY ${dayNumber - 1}`}
               </div>
               <div className="text-lg md:text-xl mb-1">
                 {getBoxIcon(dayNumber)}
