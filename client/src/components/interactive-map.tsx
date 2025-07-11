@@ -260,11 +260,22 @@ export function InteractiveMap() {
           🗺️ 戀人之島冒險地圖
         </h2>
         {selectedPath && (
-          <p className="text-gray-600">
-            當前路線：<span style={{ color: mapPaths.find(p => p.id === selectedPath)?.color }}>
-              {mapPaths.find(p => p.id === selectedPath)?.name}
-            </span>
-          </p>
+          <div className="flex items-center justify-center space-x-4">
+            <p className="text-gray-600">
+              當前路線：<span style={{ color: mapPaths.find(p => p.id === selectedPath)?.color }}>
+                {mapPaths.find(p => p.id === selectedPath)?.name}
+              </span>
+            </p>
+            <button
+              onClick={() => {
+                setSelectedPath(null);
+                setGamePhase('path-selection');
+              }}
+              className="bg-gray-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-600 transition-all duration-300"
+            >
+              返回地圖
+            </button>
+          </div>
         )}
       </div>
 
