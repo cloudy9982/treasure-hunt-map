@@ -542,36 +542,31 @@ const dailyTasks: DailyTasks[] = [
   },
 ];
 
-// Map nodes for visual layout (days 1-21)
 const mapNodes: MapNode[] = [
-  { id: "day-1", day: 1, x: 15, y: 80, location: "記憶森林入口", emoji: "🌸" },
-  { id: "day-2", day: 2, x: 25, y: 65, location: "甜蜜咖啡屋", emoji: "☕" },
-  { id: "day-3", day: 3, x: 40, y: 55, location: "智慧圖書館", emoji: "📖" },
-  { id: "day-4", day: 4, x: 55, y: 45, location: "溫馨小廚房", emoji: "🍳" },
-  { id: "day-5", day: 5, x: 70, y: 35, location: "未來規劃台", emoji: "🎯" },
-  { id: "day-6", day: 6, x: 88, y: 35, location: "音樂花園", emoji: "🎵" },
-  { id: "day-7", day: 7, x: 85, y: 50, location: "遊戲角落", emoji: "🎲" },
-  { id: "day-8", day: 8, x: 80, y: 65, location: "計劃工作室", emoji: "📅" },
-  { id: "day-9", day: 9, x: 75, y: 75, location: "回憶相簿", emoji: "📷" },
-  { id: "day-10", day: 10, x: 65, y: 80, location: "禪意角落", emoji: "🕯️" },
-  { id: "day-11", day: 11, x: 55, y: 85, location: "學習中心", emoji: "📚" },
-  { id: "day-12", day: 12, x: 45, y: 88, location: "感恩樹下", emoji: "🙏" },
-  { id: "day-13", day: 13, x: 35, y: 85, location: "創意工坊", emoji: "🎨" },
-  { id: "day-14", day: 14, x: 25, y: 80, location: "舒適按摩椅", emoji: "🤲" },
-  { id: "day-15", day: 15, x: 20, y: 70, location: "願望許願池", emoji: "⭐" },
-  { id: "day-16", day: 16, x: 18, y: 55, location: "料理實驗室", emoji: "🧪" },
-  { id: "day-17", day: 17, x: 20, y: 40, location: "觀察望台", emoji: "👀" },
-  { id: "day-18", day: 18, x: 25, y: 30, location: "溫柔休息室", emoji: "🤗" },
-  { id: "day-19", day: 19, x: 35, y: 25, location: "驚喜準備區", emoji: "🎁" },
-  {
-    id: "day-20",
-    day: 20,
-    x: 50,
-    y: 20,
-    location: "一週年紀念台",
-    emoji: "🌟",
-  },
+  { id: "day-1", day: 1, x: 10, y: 80, location: "記憶森林入口", emoji: "🌸" },
+  { id: "day-2", day: 2, x: 20, y: 65, location: "甜蜜咖啡屋", emoji: "☕" },
+  { id: "day-3", day: 3, x: 32, y: 70, location: "智慧圖書館", emoji: "📖" },
+  { id: "day-4", day: 4, x: 38, y: 60, location: "溫馨小廚房", emoji: "🍳" },
+  { id: "day-5", day: 5, x: 45, y: 72, location: "未來規劃台", emoji: "🎯" },
+  { id: "day-6", day: 6, x: 58, y: 68, location: "音樂花園", emoji: "🎵" },
+  { id: "day-7", day: 7, x: 68, y: 60, location: "遊戲角落", emoji: "🎲" },
+  { id: "day-8", day: 8, x: 75, y: 68, location: "計劃工作室", emoji: "📅" },
+  { id: "day-9", day: 9, x: 78, y: 56, location: "回憶相簿", emoji: "📷" },
+  { id: "day-10", day: 10, x: 78, y: 38, location: "禪意角落", emoji: "🕯️" },
+  { id: "day-11", day: 11, x: 55, y: 50, location: "學習中心", emoji: "📚" },
+  { id: "day-12", day: 12, x: 45, y: 48, location: "感恩樹下", emoji: "🙏" },
+  { id: "day-13", day: 13, x: 38, y: 38, location: "創意工坊", emoji: "🎨" },
+  { id: "day-14", day: 14, x: 32, y: 28, location: "舒適按摩椅", emoji: "🤲" },
+  { id: "day-15", day: 15, x: 40, y: 18, location: "願望許願池", emoji: "⭐" },
+  { id: "day-16", day: 16, x: 52, y: 18, location: "料理實驗室", emoji: "🧪" },
+  { id: "day-17", day: 17, x: 65, y: 25, location: "觀察望台", emoji: "👀" },
+  { id: "day-18", day: 18, x: 75, y: 20, location: "溫柔休息室", emoji: "🤗" },
+  { id: "day-19", day: 19, x: 60, y: 40, location: "驚喜準備區", emoji: "🎁" },
+  { id: "day-20", day: 20, x: 50, y: 35, location: "一週年紀念台", emoji: "🌟" },
 ];
+
+
+
 
 export function InteractiveMap() {
   const [completedDays, setCompletedDays] = useState<number[]>([]);
@@ -586,6 +581,7 @@ export function InteractiveMap() {
     "prologue",
   );
   const [showAnniversaryCard, setShowAnniversaryCard] = useState(false);
+  const [activeDayNumber, setActiveDayNumber] = useState<number | null>(null);
 
   const startDate = new Date("2025-07-26");
 
@@ -636,6 +632,8 @@ export function InteractiveMap() {
       return;
     }
 
+    setActiveDayNumber(node.day);
+    
     if (completedDays.includes(node.day)) {
       // Show completed task
       const taskType = selectedTasks[node.day];
@@ -662,6 +660,7 @@ export function InteractiveMap() {
       setShowTaskSelector(null);
       setSelectedMission(dayTasks.tasks[taskType]);
       setShowMissionModal(true);
+      setActiveDayNumber(day);
       
       // Check if all 20 days are completed
       if (newCompletedDays.length === 20) {
@@ -682,27 +681,27 @@ export function InteractiveMap() {
         <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-black rounded-3xl p-8 text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent"></div>
           <div className="relative z-10">
-            <h2 className="text-4xl font-bold mb-6">🌟 序章：尋寶之旅開始</h2>
+            <h2 className="text-4xl font-bold mb-6">🌟 序章：找到一枚藏寶圖！</h2>
             <div className="text-6xl mb-6 animate-pulse">🗺️</div>
             <p className="text-xl mb-8 leading-relaxed">
-              歡迎來到I💗C一週年尋寶之旅！
+              想要找到寶藏嗎？想知道旅途的盡頭是什麼嗎？趕快來跟你可愛的兔兔一起探索！
               <br />
-              接下來21天，每天都有驚喜等著你！
+              在尋寶過程中，每天都會遇到困難要你完成，努力撐過接下來的20天吧
             </p>
             <div className="bg-white/10 rounded-2xl p-6 mb-8">
               <h3 className="text-2xl font-semibold mb-4">🎮 遊戲規則</h3>
               <div className="text-left space-y-2">
                 <p>✓ 每天解鎖一個新地點</p>
-                <p>✓ 三選一：選擇你想完成的任務類型</p>
-                <p>✓ 甜蜜型💕、搞笑型😄、陪伴型🤗</p>
-                <p>✓ 完成所有任務獲得週年驚喜🎁</p>
+                <p>✓ 三選一：選擇你想完成的任務類型：甜蜜型💕、搞笑型😄、陪伴型🤗</p>
+                <p>✓ 完成所有任務後得到最終寶藏🎁</p>
+                <p>✓ 絕對！不可以！跳過！我會監督你的😤</p>
               </div>
             </div>
             <button
               onClick={handlePrologueComplete}
               className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-full text-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
-              開始尋寶之旅！🐶🐰
+              準備好惹！🐶🐰
             </button>
           </div>
         </div>
@@ -718,7 +717,7 @@ export function InteractiveMap() {
           🗺️ I💗C 一週年尋寶地圖
         </h2>
         <p className="text-gray-600">每天三選一，完成你最喜歡的任務類型！</p>
-        {testingMode && (
+        {/* {testingMode && (
           <button
             onClick={() => {
               const allDays = Array.from({ length: 20 }, (_, i) => i + 1);
@@ -736,7 +735,7 @@ export function InteractiveMap() {
           >
             測試：完成所有任務
           </button>
-        )}
+        )} */}
       </div>
 
       {/* Interactive Map */}
@@ -749,24 +748,7 @@ export function InteractiveMap() {
           <div className="absolute bottom-10 right-10 text-4xl">🏰</div>
         </div>
 
-        {/* Path connecting all nodes */}
-        <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 1 }}>
-          <path
-            d={mapNodes.reduce((path, node, index) => {
-              if (index === 0) return `M ${node.x}% ${node.y}%`;
-              const prev = mapNodes[index - 1];
-              return (
-                path +
-                ` Q ${(prev.x + node.x) / 2}% ${(prev.y + node.y - 3) / 2}% ${node.x}% ${node.y}%`
-              );
-            }, "")}
-            stroke="#FF69B4"
-            strokeWidth="3"
-            fill="none"
-            strokeDasharray="8,4"
-            opacity="0.5"
-          />
-        </svg>
+
 
         {/* Nodes */}
         {mapNodes.map((node) => {
@@ -800,7 +782,7 @@ export function InteractiveMap() {
               >
                 {isCompleted ? "✨" : isUnlocked ? node.emoji : "🔒"}
               </div>
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 text-xs font-medium text-center">
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 text-xs font-medium text-center min-w-[60px]">
                 <div>Day {node.day}</div>
                 <div className="text-gray-500">{node.location}</div>
               </div>
@@ -913,10 +895,9 @@ export function InteractiveMap() {
           onClose={() => {
             setShowMissionModal(false);
             setSelectedMission(null);
+            setActiveDayNumber(null);
           }}
-          dayNumber={
-            showTaskSelector || completedDays.find((d) => selectedTasks[d]) || 1
-          }
+          dayNumber={activeDayNumber ?? 1}
           mission={selectedMission}
         />
       )}

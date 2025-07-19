@@ -319,4 +319,64 @@
     padding: 1rem 2rem;
     font-size: 1.2rem;
   }
+
+  .couple-image {
+    width: 160px;
+    border-radius: 20px;
+    animation: flipIn 1s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  @keyframes flipIn {
+    from {
+      transform: rotateY(90deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotateY(0deg);
+      opacity: 1;
+    }
+  }
+  .treasure-flip-container {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.treasure-flip-inner {
+  width: 240px;
+  height: 100px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;
+}
+
+.treasure-flip-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.treasure-front, .treasure-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: linear-gradient(45deg, #ff6b9d, #6c5ce7);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+}
+
+.treasure-back {
+  transform: rotateY(180deg);
+}
+
 }
