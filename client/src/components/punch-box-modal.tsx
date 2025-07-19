@@ -32,20 +32,12 @@ export function PunchBoxModal({ isOpen, onClose, dayNumber, mission }: PunchBoxM
             <DialogDescription className="text-gray-700 leading-relaxed mb-6">
               {mission.description}
             </DialogDescription>
-            <div className="flex space-x-4 justify-center">
-              <Button 
-                onClick={onClose}
-                className="bg-gray-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-none hover:bg-gray-600"
-              >
-                返回
-              </Button>
-              <Button 
-                onClick={onClose}
-                className="bg-gradient-to-r from-[var(--love-pink)] to-[var(--love-coral)] text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-none"
-              >
-                完成！
-              </Button>
-            </div>
+            <Button 
+              onClick={onClose}
+              className="bg-gradient-to-r from-[var(--love-pink)] to-[var(--love-coral)] text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-none"
+            >
+              完成！
+            </Button>
           </div>
         </div>
       </DialogContent>
